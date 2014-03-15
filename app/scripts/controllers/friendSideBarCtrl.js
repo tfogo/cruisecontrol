@@ -1,26 +1,22 @@
 'use strict';
 
 angular.module('cruisecontrolApp')
-.controller('LeftSideBarCtrl', function ($scope, $http) {
+.controller('friendSideBarCtrl', function ($scope, $http) {
 	$http.get('/api/awesomeThings').success(function(friends) {
 	  	$scope.friends = friends;
-
-
-
 	});
 });
 
-angular.module('cruisecontrolApp').directive('myAlert', function(){
+angular.module('cruisecontrolApp').directive('friendSideBar', function(){
 
 
 	return function(scope, element, attrs){
-		var $container = $(element);
-		var $friends = $container.find(".friends");
-		
+		var $friends = $(element).find(".friends");
+
 		$friends.draggable({
 			cursor: "move",
 			stop: function() {
-            	alert("awd");
+            	
             }
 		});
 
