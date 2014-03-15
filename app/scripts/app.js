@@ -12,17 +12,22 @@ angular.module('cruisecontrolApp', [
         templateUrl: 'partials/main',
         controller: 'MainCtrl'
       })
-      .when('/login', {
-        templateUrl: 'partials/login',
-        controller: 'LoginCtrl'
+      .when('/feed', {
+        templateUrl: 'partials/feed',
+        controller: 'FeedCtrl'
       })
-      .when('/signup', {
-        templateUrl: 'partials/signup',
-        controller: 'SignupCtrl'
+      .when('/photos', {
+        templateUrl: 'partials/photos',
+        controller: 'PhotosCtrl'
       })
-      .when('/settings', {
-        templateUrl: 'partials/settings',
-        controller: 'SettingsCtrl',
+      .when('/messages', {
+        templateUrl: 'partials/messages',
+        controller: 'MessagesCtrl',
+        authenticate: true
+      })
+      .when('/notifications', {
+        templateUrl: 'partials/notifications',
+        controller: 'NotificationsCtrl',
         authenticate: true
       })
       .otherwise({
