@@ -1,0 +1,6 @@
+Colour scheme:
+
+Background : #01142c
+Blue : #273c54
+Lightest Blue : #587491
+Facebook Blue : #3b5998
