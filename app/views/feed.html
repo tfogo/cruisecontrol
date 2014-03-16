@@ -20,6 +20,38 @@
     <!-- endbuild -->
   </head>
   <body>
+    <div class="row full-height">
+      <div class="col-md-3 full-height lcol">
+	<h1 class="text-center">Friends</h1>
+
+	<div class="header full-height">
+	  
+	<% for(var i = 0; i < 5; i++) { %>
+	     <div class="list-group">
+	       <a href="#" class="list-group-item friends active">
+		 <div class="row">
+		   <div class="col-md-5">
+		     <img src="https://s3.amazonaws.com/uifaces/faces/twitter/michzen/128.jpg" class="profile-picture">
+		   </div>
+		   <div class="col-md-7">  
+		     <p class="friend-name">Hi</p>
+		   </div>
+		 </div>
+	       </a>
+	       </div>
+	<% } %>
+	
+	</div>
+
+	
+      </div>
+      <div class="col-md-6 full-height fcol">
+	<h1 class="text-center">Feed</h1>
+      </div>
+      <div class="col-md-3 full-height rcol">
+	<h1 class="text-center">Crews</h1>
+      </div>
+    </div>
 
 
     <!-- build:js(app) scripts/vendor.js -->
@@ -29,6 +61,6 @@
     <script src="bower_components/jqueryui/ui/jquery-ui.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-</body>
+  </body>
 
 </html>
