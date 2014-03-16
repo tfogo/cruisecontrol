@@ -3,7 +3,6 @@ angular.module('cruisecontrolApp').directive('friendFeed', function(){
 	return function(scope, element, attrs){
 
 
-		var $feed = $(element).find(".feed");
 
 		//feed.
 
