@@ -2,7 +2,8 @@
 
 angular.module('cruisecontrolApp')
   .controller('MainCtrl', function ($scope, $http) {
-    $http.get('/api/awesomeThings').success(function(awesomeThings) {
-      $scope.awesomeThings = awesomeThings;
+    $http.get('/users/friends').success(function(friends) {
+	$scope.friends = friends;
+	console.log(friends);
     });
   });
