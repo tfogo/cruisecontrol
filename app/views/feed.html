@@ -28,7 +28,7 @@
 	  
 	<% for(var i = 0; i < 5; i++) { %>
 	     <div class="list-group">
-	       <a href="#" class="list-group-item friends active">
+	       <a href="#" class="list-group-item friends">
 		 <div class="row">
 		   <div class="col-md-5">
 		     <img src="https://s3.amazonaws.com/uifaces/faces/twitter/michzen/128.jpg" class="profile-picture">
@@ -46,7 +46,7 @@
 	
       </div>
       <div class="col-md-6 full-height fcol">
-	<h1 class="text-center">Feed</h1>
+	       <h1 class="text-center">Feed</h1>
       </div>
       <div class="col-md-3 full-height rcol">
 	<h1 class="text-center">Crews</h1>
@@ -54,11 +54,46 @@
     </div>
 
 
-    <!-- build:js(app) scripts/vendor.js -->
-    <!-- bower:js -->
+
     <script src="bower_components/jquery/dist/jquery.js"></script>
     
     <script src="bower_components/jqueryui/ui/jquery-ui.js"></script>
+
+    <script>
+
+    $(document).keyup(function(e) {
+
+        switch(e.keyCode){
+            case 49:
+                $(".list-group").find(':nth-child(1)').addClass( "active" );
+                break
+        }
+        alert("kffj" + e.keyCode);
+    });
+
+
+    $(".list-group").draggable({
+      cursor: "move",
+      revert: true,
+      stop: function(event) {
+           newsfeed();
+      }
+    });
+
+
+
+    function newsfeed()
+    {
+      alert("awdawd");
+    } 
+
+    </script>
+
+
+
+    <!-- build:js(app) scripts/vendor.js -->
+    <!-- bower:js -->
+
     <!-- endbower -->
     <!-- endbuild -->
   </body>
